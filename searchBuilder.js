@@ -2,50 +2,29 @@
 (B1 or B2 or C2 or D2) and
 (C1 or C2 or C3 or C4)*/
 function out() {
+    var form = document.f1;
     var output = "";
-    var first = true;
-    var firstsub = true;
     var values = [
-        [document.f1.aName.value, document.f1.a1.value, document.f1.a2.value, document.f1.a3.value, document.f1.a4.value],
-        [document.f1.bName.value, document.f1.b1.value, document.f1.b2.value, document.f1.b3.value, document.f1.b4.value],
-        [document.f1.cName.value, document.f1.c1.value, document.f1.c2.value, document.f1.c3.value, document.f1.c4.value]
+        [form.aName.value, form.a1.value, form.a2.value, form.a3.value, form.a4.value],
+        [form.bName.value, form.b1.value, form.b2.value, form.b3.value, form.b4.value],
+        [form.cName.value, form.c1.value, form.c2.value, form.c3.value, form.c4.value]
     ];
-    for (var i = 0; i < values.length; i++) {
-        firstsub = true;
-        for (var j = 0; j < values[i].length; j++) {
-            if (notEmpty(values[i][j])) {
-                if (first) {
-                    if (firstsub) {
-                        output += "(";
-                        firstsub = false;
-                    } else {
-                        output += " OR ";
-                    }
-                } else {
-                    if (firstsub) {
-                        output += " and (";
-                        firstsub = false;
-                    } else {
-                        output += " OR ";
-                    }
-                }
-                output += values[i][j];
-            }
-        }
-        if (!firstsub) {
-            output += ")";
-            if (first) first = false;
-        }
-    }
-    if (output.length < 2) alert("You must enter at least one term");
-    else document.f1.outbox.value = output;
-}
 
-function notEmpty(aStr) {
-    if (aStr == "") return false;
-    if (aStr == null || aStr == undefined) return false;
-    for (var k = 0; k < aStr.length; k++) {
-        if (aStr.charAt(k) != " ") return true;
+    var outputParts = [];
+
+    for (var i = 0; i < values.length; i++) {
+        var groupTerms = values[i]
+            .map(function (s) { return s.trim(); })
+            .filter(function (s) { return s.length >= 3; }); // Minimum 3 letters
+
+        if (groupTerms.length > 0) {
+            outputParts.push("(" + groupTerms.join(" OR ") + ")");
+        }
     }
-    return false;
+
+    if (outputParts.length === 0) {
+        alert("You must enter at least one term of 3 or more characters.");
+    } else {
+        form.outbox.value = outputParts.join(" and ");
+    }
 }
