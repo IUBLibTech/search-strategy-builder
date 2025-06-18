@@ -15,146 +15,66 @@
         and is not designed to input a search, you should be able to cut and
         paste the results into most databases' search boxes.</p>
 
-        <form id="f1" name="f1">
-            <table border="1" cellpadding="1">
-                <tbody>
-                    <tr>
-                        <td></td>
+       <form name="f1">
+<table border="1" cellpadding="1">
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td align="center" style="background-color: #8080ff;"><font color="#000000" size="1.2em"><b>Concept 1</b></font></td>
+			<td valign="bottom"><font size="1.2em">and</font></td>
+			<td align="center" style="background-color: #ff8080;"><font color="#000000" size="1.2em"><b>Concept 2</b></font></td>
+			<td valign="bottom"><font size="1.2em">and</font></td>
+			<td align="center" style="background-color: #80ff80;"><font color="#000000" size="1.2em"><b>Concept 3</b></font></td>
+		</tr>
+		<tr>
+			<td rowspan="2"><font size="2.0em"><b>Name your concepts here.</b></font></td>
+			<td align="center" style="background-color: #c0c0ff;">
+				<input id="aName" name="aName" aria-label="Concept 1 Name" size="12" style="text-align: center;" type="text" />
+			</td>
+			<td rowspan="3">&nbsp;</td>
+			<td align="center" style="background-color: #ffc0c0;">
+				<input id="bName" name="bName" aria-label="Concept 2 Name" size="12" style="text-align: center;" type="text" />
+			</td>
+			<td rowspan="3">&nbsp;</td>
+			<td align="center" style="background-color: #c0ffc0;">
+				<input id="cName" name="cName" aria-label="Concept 3 Name" size="12" style="text-align: center;" type="text" />
+			</td>
+		</tr>
+		<tr>
+			<td align="center" style="background-color: #a0a0a0;" valign="bottom"><font color="#000000" size="1.0em"><b>Search terms</b></font></td>
+			<td align="center" style="background-color: #a0a0a0;" valign="bottom"><font color="#000000" size="1.0em"><b>Search terms</b></font></td>
+			<td align="center" style="background-color: #a0a0a0;" valign="bottom"><font color="#000000" size="1.0em"><b>Search terms</b></font></td>
+		</tr>
+		<tr>
+			<td><font size="2.0em"><b>List alternate terms for each concept.<br /><br />
+				These can be synonyms, or they can be specific examples of the concept.<br /><br />
+				Use single words, or &quot;short phrases&quot; in quotes</b></font></td>
+			<td style="background-color: #c0c0ff;">
+				<input id="a1" name="a1" aria-label="Concept 1 alternate term 1" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; display: block;text-align: center;">or<span><br />
+				<input id="a2" name="a2" aria-label="Concept 1 alternate term 2" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="a3" name="a3" aria-label="Concept 1 alternate term 3" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="a4" name="a4" aria-label="Concept 1 alternate term 4" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span>
+			</td>
+			<td style="background-color: #ffc0c0;">
+				<input id="b1" name="b1" aria-label="Concept 2 alternate term 1" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="b2" name="b2" aria-label="Concept 2 alternate term 2" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="b3" name="b3" aria-label="Concept 2 alternate term 3" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="b4" name="b4" aria-label="Concept 2 alternate term 4" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span>
+			</td>
+			<td style="background-color: #c0ffc0;">
+				<input id="c1" name="c1" aria-label="Concept 3 alternate term 1" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="c2" name="c2" aria-label="Concept 3 alternate term 2" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="c3" name="c3" aria-label="Concept 3 alternate term 3" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span><br />
+				<input id="c4" name="c4" aria-label="Concept 3 alternate term 4" size="12" style="text-align: center;" type="text" /><br /><span style="display: block; text-align: center;">or<span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<input name="button1" onclick="out()" type="button" value="Click to create a Search Statement!" /><br />
+<textarea cols="58" name="outbox" aria-label="Search Statement" rows="6"></textarea>
+</form>
 
-                        <td align="center" style="background-color:#8080FF">
-                        <strong>Concept 1</strong></td>
-
-                        <td valign="bottom">and</td>
-
-                        <td align="center" style="background-color:#FF8080">
-                        <strong>Concept 2</strong></td>
-
-                        <td valign="bottom">and</td>
-
-                        <td align="center" style="background-color:#80FF80">
-                        <strong>Concept 3</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="2"><strong>Name your concepts
-                        here</strong></td>
-
-                        <td align="center" style="background-color:#c0c0FF">
-                        <input name="aName" size="12" style=
-                        "text-align:center"></td>
-
-                        <td rowspan="3">&nbsp;</td>
-
-                        <td align="center" style="background-color:#FFc0c0">
-                        <input name="bName" size="12" style=
-                        "text-align:center"></td>
-
-                        <td rowspan="3">&nbsp;</td>
-
-                        <td align="center" style="background-color:#c0FFc0">
-                        <input name="cName" size="12" style=
-                        "text-align:center"></td>
-                    </tr>
-
-                    <tr>
-                        <td align="center" style="background-color:#a0a0a0"
-                        valign="bottom"><strong>Search terms</strong></td>
-
-                        <td align="center" style="background-color:#a0a0a0"
-                        valign="bottom"><strong>Search terms</strong></td>
-
-                        <td align="center" style="background-color:#a0a0a0"
-                        valign="bottom"><strong>Search terms</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td rowspan="1"><strong>List alternate terms for each
-                        concept.<br>
-                        <br>
-                        These can be synonyms, or they can be specific examples
-                        of the concept.<br>
-                        <br>
-                        Use single words, or "short phrases" in
-                        quotes<br></strong></td>
-
-                        <td style=
-                        "background-color:#c0c0FF;vertical-align:middle">
-                            <table cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td align="center" style=
-                                        "background-color:#c0c0FF;vertical-align:middle">
-                                        <strong><input name="a1" size="12"
-                                        style="text-align:center"><br>
-                                        or<br>
-                                        <input name="a2" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br>
-                                        <input name="a3" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br>
-                                        <input name="a4" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br></strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-
-                        <td style=
-                        "background-color:#FFc0c0;vertical-align:middle">
-                            <table cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td align="center" style=
-                                        "background-color:#FFc0c0;vertical-align:middle">
-                                        <strong><input name="b1" size="12"
-                                        style="text-align:center"><br>
-                                        or<br>
-                                        <input name="b2" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br>
-                                        <input name="b3" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br>
-                                        <input name="b4" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br></strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-
-                        <td style=
-                        "background-color:#c0FFc0;vertical-align:middle">
-                            <table cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td align="center" style=
-                                        "background-color:#c0FFc0">
-                                        <strong><input name="c1" size="12"
-                                        style="text-align:center"><br>
-                                        or<br>
-                                        <input name="c2" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br>
-                                        <input name="c3" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br>
-                                        <input name="c4" size="12" style=
-                                        "text-align:center"><br>
-                                        or<br></strong></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <input name="button1" onclick="out()" type="button" value=
-            "Click to create a Search Statement"><br>
-            <textarea cols="58" name="outbox" rows="6"></textarea>
-        </form>
     </div>
 </body>
 </html>
